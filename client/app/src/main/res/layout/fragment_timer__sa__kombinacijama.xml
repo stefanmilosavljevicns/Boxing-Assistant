@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Timer_Sa_Kombinacijama"
+    android:background="@color/background_color">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:borderWidth="0dp"
+        app:tint="@android:color/white"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:id="@+id/combo_back"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:backgroundTint="@color/button_red"
+        android:contentDescription="PIC" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMBOS"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:id="@+id/header"
+        android:textSize="35sp"
+        android:textColor="@color/white"
+        android:background="@color/background_color2" />
+
+    <Button
+        android:id="@+id/fight_btn"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/button_red"
+        android:text="START"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold">
+    </Button>
+
+    <ScrollView
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="70dp"
+        android:scrollbarThumbVertical="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color2"
+        >
+
+        <LinearLayout
+            android:id="@+id/kombinatorika"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textSize="20sp"
+                android:layout_marginStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:text="Custom Preset"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"/>
+            <ImageButton
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_format_list_bulleted_24"
+                app:backgroundTint="@null"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/round_btn_red"
+                android:layout_toLeftOf="@id/SAVE"
+                android:text="SELECT"
+                android:textStyle="bold"
+                android:id="@+id/workout_preset"
+                />
+            <ImageButton
+                app:backgroundTint="@null"
+                android:src="@drawable/ic_baseline_save_24"
+                android:layout_marginTop="5dp"
+                android:layout_margin="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_btn_red"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"
+                android:id="@+id/SAVE"
+                />
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMBINATION LIST"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/white"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/background_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/recikler" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:borderWidth="0dp"
+                    app:tint="@android:color/white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/recikler"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:id="@+id/add_comb"
+                    android:backgroundTint="@color/button_red"
+                    android:text="Add"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/hint2"
+                    android:layout_below="@id/recikler"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Hold and drag to reorganize!"
+                    android:textStyle="italic"
+                    android:textColor="@color/grey_font"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ROUND SETTINGS"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/white"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:foregroundTint="@color/white"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/spinner_category_forcombo"
+                android:backgroundTint="@color/background_color"
+                />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of rounds"
+                android:theme="@style/CustomText"
+                android:layout_marginBottom="15dp"/>
+
+            <NumberPicker
+
+                android:id="@+id/round_counter_forcombo"
+                android:layout_width="wrap_content"
+                android:layout_height="138dp"
+                android:layout_gravity="center"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+
+
+                android:theme="@style/NumberPickerText" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time of rounds"
+                android:theme="@style/CustomText"
+
+                android:layout_marginBottom="15dp"/>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <TextView
+
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="MIN"
+                    android:theme="@style/CustomText"
+
+                    />
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="SEC"
+                    android:theme="@style/CustomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <NumberPicker
+
+                    android:id="@+id/min_round_counter_forcombo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+                <NumberPicker
+
+                    android:id="@+id/second_round_counter_forcombo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rest Time"
+                android:theme="@style/CustomText"
+
+                android:layout_marginBottom="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:theme="@style/CustomText"
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="MIN"
+
+                    />
+                <TextView
+                    android:theme="@style/CustomText"
+                    android:gravity="center"
+                    android:text="SEC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <NumberPicker
+
+                    android:id="@+id/rest_counter_minutes_forcombo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+                <NumberPicker
+
+                    android:id="@+id/rest_counter_seconds_forcombo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time to prepare"
+                android:theme="@style/CustomText"
+
+                android:layout_marginBottom="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:theme="@style/CustomText"
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="MIN"
+
+                    />
+                <TextView
+                    android:theme="@style/CustomText"
+                    android:gravity="center"
+                    android:text="SEC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <NumberPicker
+
+                    android:id="@+id/prepare_counter_minutes_forcombo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+                <NumberPicker
+
+                    android:id="@+id/prepare_counter_seconds_forcombo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:theme="@style/CustomText"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="Play song from list"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/music_switch_combo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

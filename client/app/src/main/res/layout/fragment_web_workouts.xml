@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebWorkouts">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".dialog_for_combos"
+        android:padding="5dp"
+        android:background="@color/dialog_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/confirm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Web Workouts"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/webworkout_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_margin="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:padding="5dp"
+                android:textAlignment="center"
+  />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

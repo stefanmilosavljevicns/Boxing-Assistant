@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/backgroud_border_music"
+    android:layout_margin="5dp"
+    android:id="@+id/parent_layout_workout"
+    >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="PROBA"
+
+            android:maxLines="4"
+            android:padding="6dp"
+            android:layout_margin="5dp"
+            android:id="@+id/combo_name_workout"
+
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_baseline_drive_file_rename_outline_24"
+            android:id="@+id/rename"
+            android:layout_toLeftOf="@id/removebtn"
+            app:tint="@color/background_color2" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_baseline_share_24"
+            android:id="@+id/sharebtn"
+            android:layout_alignParentEnd="true"
+            app:tint="@color/background_color2" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            app:tint="@color/background_color2"
+            android:layout_toLeftOf="@id/sharebtn"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:id="@+id/removebtn"
+
+            />
+
+
+</RelativeLayout>

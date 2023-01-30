@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Basic_Timer"
+    android:background="@color/background_color">
+    >
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:borderWidth="0dp"
+            app:tint="@android:color/white"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:id="@+id/timer_back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:backgroundTint="@color/button_red"
+            android:contentDescription="PIC" />
+        <Button
+            android:id="@+id/fight_btn"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_red"
+            android:text="START"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+
+            />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color2"
+
+        android:text="TIMER"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:scrollbarThumbVertical="@android:color/white"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color2"
+        android:id="@+id/round_timer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:id="@+id/titletext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Custom Preset"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:theme="@style/CustomText" />
+
+
+                <ImageButton
+
+                    android:src="@drawable/ic_baseline_format_list_bulleted_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@null"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/timer_preset"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@id/save_timer"
+                    android:background="@drawable/round_btn_red"
+
+                    android:textStyle="bold"
+                    />
+
+                <ImageButton
+
+                    android:id="@+id/save_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/round_btn_red"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+
+                    android:src="@drawable/ic_baseline_save_24"
+                    android:text="Save PRESET "
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+            <TextView
+                android:layout_gravity="center"
+
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of rounds"
+
+                android:theme="@style/CustomText"
+                android:layout_marginTop="15dp"
+                />
+
+            <NumberPicker
+                android:divider="@color/button_red"
+                android:id="@+id/round_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="138dp"
+                android:layout_gravity="center"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:theme="@style/NumberPickerText" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+
+            <TextView
+
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time of rounds"
+                android:theme="@style/CustomText"
+                android:layout_marginBottom="15dp"/>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <TextView
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="MIN"
+                    android:layout_marginEnd="25dp"
+                    android:theme="@style/CustomText"
+
+                    />
+                <TextView
+                    android:textColor="@color/white"
+
+                    android:gravity="center"
+                    android:text="SEC"
+                    android:theme="@style/CustomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <NumberPicker
+
+                    android:id="@+id/min_round_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+                <NumberPicker
+
+                    android:id="@+id/second_round_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+            <TextView
+
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="Rest Time"
+                android:theme="@style/CustomText"
+
+                android:layout_marginBottom="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <TextView
+
+                    android:theme="@style/CustomText"
+
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="MIN"
+
+                    />
+                <TextView
+                    android:theme="@style/CustomText"
+
+
+                    android:text="SEC"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <NumberPicker
+
+                    android:id="@+id/rest_counter_minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+                <NumberPicker
+
+                    android:id="@+id/rest_counter_seconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time to prepare"
+                android:theme="@style/CustomText"
+                android:layout_marginBottom="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:theme="@style/CustomText"
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="MIN"
+
+                    />
+                <TextView
+                    android:theme="@style/CustomText"
+                    android:gravity="center"
+                    android:text="SEC"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                >
+
+                <NumberPicker
+
+                    android:id="@+id/prepare_counter_minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+                <NumberPicker
+
+                    android:id="@+id/prepare_counter_seconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+            <TextView
+                android:theme="@style/CustomText"
+
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Play music from library"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/music_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

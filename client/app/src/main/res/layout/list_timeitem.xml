@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+
+        android:layout_margin="5dp"
+        android:id="@+id/parent_timer"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroud_border_music">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="PROBA"
+            android:maxLines="4"
+            android:padding="6dp"
+            android:layout_margin="5dp"
+            android:id="@+id/workout_name"
+            />
+        <ImageButton
+
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/removebtn_timer"
+            android:src="@drawable/ic_baseline_drive_file_rename_outline_24"
+            android:id="@+id/renamebtn_timer"
+
+            app:tint="@color/background_color2" />
+
+        <ImageButton
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:id="@+id/removebtn_timer"
+            app:tint="@color/background_color2"
+
+            />
+
+    </RelativeLayout>

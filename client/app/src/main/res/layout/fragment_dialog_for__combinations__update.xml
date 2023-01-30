@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_background"
+    tools:context=".DialogForCombinationsUpdate">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skrol_apdejt"
+
+        >
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".dialog_for_combos"
+            android:padding="5dp"
+            >
+
+            <EditText
+                android:id="@+id/combo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toStartOf="@id/add_combination"
+                android:background="@drawable/dialog_editbox_background"
+                android:hint="ENTER NAME OF MOVE"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:inputType="text"
+                android:paddingStart="5dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_font"
+                android:textSize="15sp" />
+
+                <Button
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/button_red"
+                    android:id="@+id/add_combination"
+                    android:text="ADD"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/kombinacion"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/combo_name"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/dialog_editbox_background"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/hint2"
+
+                android:layout_below="@id/kombinacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_centerInParent="true"
+                android:text="Hold and drag to reorganize,swipe right to delete!"
+                android:textStyle="italic"
+                android:textColor="@color/grey_font"
+                android:textSize="15sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/hint2"
+                android:layout_height="0.5dp"
+                android:id="@+id/pregrada"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@color/white"
+                />
+            <TextView
+                android:id="@+id/dur_comb"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@id/pregrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Duration of combo"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+            <LinearLayout
+                android:id="@+id/timer_comb"
+                android:layout_below="@id/dur_comb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_centerInParent="true"
+                >
+
+
+                <TextView
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="MIN"
+                    android:theme="@style/CustomText"
+
+                    />
+                <TextView
+
+                    android:textColor="@color/white"
+
+                    android:gravity="center"
+                    android:text="SEC"
+                    android:theme="@style/CustomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_below="@id/timer_comb"
+                android:id="@+id/layout_comb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_centerInParent="true"
+                >
+
+                <NumberPicker
+
+                    android:id="@+id/min_combo_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+                <NumberPicker
+
+                    android:id="@+id/sec_combo_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+
+
+                    android:theme="@style/NumberPickerText" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_to_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_comb"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/button_red"
+
+                android:text="UPDATE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+        </RelativeLayout>
+
+

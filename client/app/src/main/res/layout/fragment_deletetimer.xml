@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Deletetimer">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".dialog_for_combos"
+            android:padding="5dp"
+            android:background="@color/dialog_background">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_margin="5dp"
+                    android:textStyle="bold
+"
+                    android:textAlignment="center"
+                    android:text="ENTER TITLE OF WORKOUT"
+                    android:layout_width="match_parent"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirm_timer"/>
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center" >
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="25dp"
+                        android:text="Yes"
+                        android:background="@drawable/round_btn_red"
+                        android:id="@+id/yes_timer"
+                        />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:background="@drawable/round_btn_red"
+                        android:id="@+id/no_timer"
+                        android:text="No"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

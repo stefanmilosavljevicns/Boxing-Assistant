@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/basicPanel">
+
+    <fragment
+        android:id="@+id/basicPanel"
+        android:name="com.example.boxing_assistant.BasicPanel"
+        android:label="fragment_basic_panel"
+        tools:layout="@layout/fragment_basic_panel" >
+        <action
+            android:id="@+id/action_basicPanel_to_basic_Timer"
+            app:destination="@id/basic_Timer"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicPanel_to_timer_Sa_Kombinacijama"
+            app:destination="@id/timer_Sa_Kombinacijama"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_basicPanel_to_music"
+            app:destination="@id/music"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicPanel_to_tutorial"
+            app:destination="@id/tutorial"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/basic_Timer"
+        android:name="com.example.boxing_assistant.BasicTimer"
+        android:label="fragment_basic__timer"
+        tools:layout="@layout/fragment_basic__timer" >
+        <action
+            android:id="@+id/action_basic_Timer_to_timer"
+            app:destination="@id/timer"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_top" />
+        <action
+            android:id="@+id/action_basic_Timer_to_timerChooser"
+            app:destination="@id/timerChooser"
+            app:enterAnim="@anim/from_top"
+            app:exitAnim="@anim/to_bottom" />
+        <action
+            android:id="@+id/action_basic_Timer_to_addNewTimer"
+            app:destination="@id/addNewTimer" />
+        <action
+            android:id="@+id/action_basic_Timer_to_basicPanel"
+            app:destination="@id/basicPanel"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/timer"
+        android:name="com.example.boxing_assistant.Timer"
+        android:label="fragment_timer"
+
+        tools:layout="@layout/fragment_timer" >
+        <argument
+            android:name="RoundPicker"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RoundTimerMin"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RoundTimerSec"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RestTimerMin"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RestTimerSec"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="PrepareTimerMin"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="PrepareTimerSec"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_timer_to_basic_Timer"
+            app:destination="@id/basic_Timer" />
+        <action
+            android:id="@+id/action_timer_to_basic_Timer2"
+            app:destination="@id/basic_Timer"
+            app:enterAnim="@anim/from_top"
+            app:exitAnim="@anim/to_bottom" />
+        <argument
+            android:name="music"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/timer_Sa_Kombinacijama"
+        android:name="com.example.boxing_assistant.TimerWithCombinations"
+        android:label="fragment_timer__sa__kombinacijama"
+        tools:layout="@layout/fragment_timer__sa__kombinacijama" >
+
+        <action
+            android:id="@+id/action_timer_Sa_Kombinacijama_to_dialog_for_combo"
+            app:destination="@id/dialog_for_combo" />
+        <action
+            android:id="@+id/action_timer_Sa_Kombinacijama_to_timer_Comb"
+            app:destination="@id/timer_Comb"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_top" />
+        <action
+            android:id="@+id/action_timer_Sa_Kombinacijama_to_workoutChooser"
+            app:destination="@id/workoutChooser"
+            app:enterAnim="@anim/from_top"
+            app:exitAnim="@anim/to_bottom" />
+        <action
+            android:id="@+id/action_timer_Sa_Kombinacijama_to_dialog_for_Combinations_Update"
+            app:destination="@id/dialog_for_Combinations_Update" />
+        <action
+            android:id="@+id/action_timer_Sa_Kombinacijama_to_dialogAddNewPlan"
+            app:destination="@id/dialogAddNewPlan" />
+        <action
+            android:id="@+id/action_timer_Sa_Kombinacijama_to_basicPanel"
+            app:destination="@id/basicPanel"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialog_for_combo"
+        android:name="com.example.boxing_assistant.DialogForCombo"
+        android:label="fragment_dialog_for_combo"
+        tools:layout="@layout/fragment_dialog_for_combo" >
+        <action
+            android:id="@+id/action_dialog_for_combo_to_timer_Sa_Kombinacijama"
+            app:destination="@id/timer_Sa_Kombinacijama" />
+    </dialog>
+    <fragment
+        android:id="@+id/timer_Comb"
+        android:name="com.example.boxing_assistant.TimerComb"
+        android:label="fragment_timer__comb"
+        tools:layout="@layout/fragment_timer__comb" >
+        <argument
+            android:name="RoundPicker"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RoundTimerMin"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RoundTimerSec"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RestTimerMin"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="RestTimerSec"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="PrepareTimerMin"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="PrepareTimerSec"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_timer_Comb_to_timer_Sa_Kombinacijama"
+            app:destination="@id/timer_Sa_Kombinacijama"
+            app:enterAnim="@anim/from_top"
+            app:exitAnim="@anim/to_bottom" />
+        <argument
+            android:name="music"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutChooser"
+        android:name="com.example.boxing_assistant.WorkoutChooser"
+        android:label="fragment_workout_chooser"
+        tools:layout="@layout/fragment_workout_chooser" >
+        <action
+            android:id="@+id/action_workoutChooser_to_timer_Sa_Kombinacijama"
+            app:destination="@id/timer_Sa_Kombinacijama"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_top" />
+        <action
+            android:id="@+id/action_workoutChooser_to_deleteconfirm"
+            app:destination="@id/DeleteConfirm" />
+        <action
+            android:id="@+id/action_workoutChooser_to_renameWorkout"
+            app:destination="@id/renameWorkout" />
+        <action
+            android:id="@+id/action_workoutChooser_to_webWorkouts"
+            app:destination="@id/webWorkouts" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialog_for_Combinations_Update"
+        android:name="com.example.boxing_assistant.DialogForCombinationsUpdate"
+        android:label="fragment_dialog_for__combinations__update"
+        tools:layout="@layout/fragment_dialog_for__combinations__update" >
+        <action
+            android:id="@+id/action_dialog_for_Combinations_Update_to_timer_Sa_Kombinacijama"
+            app:destination="@id/timer_Sa_Kombinacijama" />
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogAddNewPlan"
+        android:name="com.example.boxing_assistant.DialogAddNewPlan"
+        android:label="fragment_dialog_add_new_plan"
+        tools:layout="@layout/fragment_dialog_add_new_plan" >
+        <action
+            android:id="@+id/action_dialogAddNewPlan_to_timer_Sa_Kombinacijama"
+            app:destination="@id/timer_Sa_Kombinacijama" />
+    </dialog>
+    <dialog
+        android:id="@+id/DeleteConfirm"
+        android:name="com.example.boxing_assistant.DeleteConfirm"
+        android:label="fragment_deleteconfirm"
+        tools:layout="@layout/fragment_deleteconfirm" >
+        <action
+            android:id="@+id/action_deleteconfirm_to_workoutChooser"
+            app:destination="@id/workoutChooser" />
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/timerChooser"
+        android:name="com.example.boxing_assistant.TimerChooser"
+        android:label="fragment_timer_chooser"
+        tools:layout="@layout/fragment_timer_chooser" >
+        <action
+            android:id="@+id/action_timerChooser_to_basic_Timer"
+            app:destination="@id/basic_Timer"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_top" />
+        <action
+            android:id="@+id/action_timerChooser_to_deletetimer"
+            app:destination="@id/DeleteTimer" />
+        <action
+            android:id="@+id/action_timerChooser_to_renameWorkout"
+            app:destination="@id/renameWorkout" />
+    </fragment>
+    <dialog
+        android:id="@+id/addNewTimer"
+        android:name="com.example.boxing_assistant.AddNewTimer"
+        android:label="fragment_add_new_timer"
+        tools:layout="@layout/fragment_add_new_timer" >
+        <action
+            android:id="@+id/action_addNewTimer_to_basic_Timer"
+            app:destination="@id/basic_Timer" />
+    </dialog>
+    <dialog
+        android:id="@+id/DeleteTimer"
+        android:name="com.example.boxing_assistant.DeleteTimer"
+        android:label="fragment_deletetimer"
+        tools:layout="@layout/fragment_deletetimer" >
+        <action
+            android:id="@+id/action_deletetimer_to_timerChooser"
+            app:destination="@id/timerChooser" />
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/music"
+        android:name="com.example.boxing_assistant.Music"
+        android:label="music_fragment"
+        tools:layout="@layout/music_fragment" >
+        <action
+            android:id="@+id/action_music_to_basicPanel"
+            app:destination="@id/basicPanel"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/renameWorkout"
+        android:name="com.example.boxing_assistant.RenameWorkout"
+        android:label="fragment_rename_workout"
+        tools:layout="@layout/fragment_rename_workout" >
+        <action
+            android:id="@+id/action_renameWorkout_to_workoutChooser"
+            app:destination="@id/workoutChooser" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="is_timer"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="is_workout"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_renameWorkout_to_timerChooser"
+            app:destination="@id/timerChooser" />
+    </dialog>
+    <fragment
+        android:id="@+id/tutorial"
+        android:name="com.example.boxing_assistant.Tutorial"
+        android:label="fragment_tutorial2"
+        tools:layout="@layout/fragment_tutorial2" >
+        <action
+            android:id="@+id/action_tutorial_to_basicPanel"
+            app:destination="@id/basicPanel"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <dialog
+        android:id="@+id/webWorkouts"
+        android:name="com.example.boxing_assistant.WebWorkouts"
+        android:label="fragment_web_workouts"
+        tools:layout="@layout/fragment_web_workouts" >
+        <action
+            android:id="@+id/action_webWorkouts_to_workoutChooser"
+            app:destination="@id/workoutChooser" />
+    </dialog>
+
+</navigation>

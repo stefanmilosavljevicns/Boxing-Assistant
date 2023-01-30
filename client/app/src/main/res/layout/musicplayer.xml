@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/title_music"
+            android:layout_height="wrap_content"
+            android:text="Naziv pesme"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:layout_gravity="center"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="start"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="17sp"
+                android:id="@+id/start_time"
+
+                android:textColor="@color/white"/>
+            <SeekBar
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toRightOf="@id/start_time"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toStartOf="@id/end_time"/>
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="17sp"
+                android:id="@+id/end_time"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageButton
+
+                android:layout_width="wrap_content"
+                android:id="@+id/prev_left"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_skip_previous_24"
+                android:textColor="@color/white"/>
+            <ImageButton
+
+                android:layout_width="wrap_content"
+                android:id="@+id/play"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_play_arrow_24"
+                android:textColor="@color/white"/>
+
+            <ImageButton
+
+                android:layout_width="wrap_content"
+                android:id="@+id/prev_right"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_skip_next_24"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

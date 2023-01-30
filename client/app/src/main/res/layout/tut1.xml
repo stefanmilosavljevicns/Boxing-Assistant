@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tut1_layout"
+    android:orientation="vertical"
+    android:background="@color/background_color2">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BASIC TIMER"
+        android:id="@+id/tutorial1"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:id="@+id/taraba"
+        android:background="@color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Setting up timer"
+        android:id="@+id/tutorial_podnaslov"
+        android:layout_margin="5dp"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:background="@drawable/krug"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/tut1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To begin with setting up timer you need to choose TIMER tab from starting menu."
+
+        android:layout_margin="10dp"
+
+        android:textColor="@color/white"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2."
+        android:background="@drawable/krug"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/tut2"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Now enter your parameters. Keep in mind that only field that cannot be null is Time of rounds! "
+
+        android:layout_margin="10dp"
+
+        android:textColor="@color/white"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3."
+        android:background="@drawable/krug"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/tut3"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="When you set everything up press START to begin with workout."
+
+        android:layout_margin="10dp"
+
+        android:textColor="@color/white"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/white"
+        />
+</LinearLayout>

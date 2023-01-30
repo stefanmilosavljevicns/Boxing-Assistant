@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Boxing Assistant</string>
+    <string name="info_loading">For the best experience with
+using  this app please select
+profile that best matches
+ your needs.</string>
+    <string name="hint_plan">You can always change your plan.</string>
+    <string name="calorie_track">Track your boxing statistic! With our advanced system of calculation.</string>
+    <string-array name="Rounds_array">
+        <item>Custom</item>
+        <item>Amateur Boxing</item>
+        <item>Professional Boxing</item>
+
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
